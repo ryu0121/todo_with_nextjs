@@ -4,22 +4,19 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "format": "prettier --write ./**/*.jsx",
-    "lint": "eslint --fix ./**/*.jsx",
+    "format": "prettier --write ./**/*.tsx",
+    "lint": "eslint --fix ./**/*.tsx",
     "fix": "yarn run format && yarn run lint",
     "prepare": "husky install",
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "*.jsx": [
+    "*.tsx": [
       "prettier --write",
       "eslint --fix"
     ]
   },
   "devDependencies": {
-    "next": "latest",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
     "@babel/core": "^7.17.8",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-env": "^7.16.11",
@@ -31,7 +28,11 @@
     "eslint-plugin-react": "^7.29.4",
     "husky": "6.0.0",
     "lint-staged": "11.0",
+    "next": "latest",
     "prettier": "2.3.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "swr": "^1.2.2",
     "typescript": "^4.6.3"
   }
 }
